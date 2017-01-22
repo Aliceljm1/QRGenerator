@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QRGenerator", "QRGenerator\QRGenerator.vcxproj", "{0FB1117B-C2F1-4222-90DA-9C498DCEEE43}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestLIBQR_Dll", "TestLIBQR_Dll\TestLIBQR_Dll.vcxproj", "{22908EDF-3D86-4B30-8D57-8484A5CFB14C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{56D65C75-73D1-43C5-9F0D-450A4C18E640} = {56D65C75-73D1-43C5-9F0D-450A4C18E640}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libQR", "libQR\libQR.vcxproj", "{56D65C75-73D1-43C5-9F0D-450A4C18E640}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AFDC477F-1D3F-4471-B9C9-451EF99E669C} = {AFDC477F-1D3F-4471-B9C9-451EF99E669C}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QRUtilsLib", "QRUtilsLib\QRUtilsLib.vcxproj", "{AFDC477F-1D3F-4471-B9C9-451EF99E669C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FB1117B-C2F1-4222-90DA-9C498DCEEE43}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0FB1117B-C2F1-4222-90DA-9C498DCEEE43}.Debug|Win32.Build.0 = Debug|Win32
+		{0FB1117B-C2F1-4222-90DA-9C498DCEEE43}.Release|Win32.ActiveCfg = Release|Win32
+		{0FB1117B-C2F1-4222-90DA-9C498DCEEE43}.Release|Win32.Build.0 = Release|Win32
+		{22908EDF-3D86-4B30-8D57-8484A5CFB14C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{22908EDF-3D86-4B30-8D57-8484A5CFB14C}.Debug|Win32.Build.0 = Debug|Win32
+		{22908EDF-3D86-4B30-8D57-8484A5CFB14C}.Release|Win32.ActiveCfg = Release|Win32
+		{22908EDF-3D86-4B30-8D57-8484A5CFB14C}.Release|Win32.Build.0 = Release|Win32
+		{56D65C75-73D1-43C5-9F0D-450A4C18E640}.Debug|Win32.ActiveCfg = Debug|Win32
+		{56D65C75-73D1-43C5-9F0D-450A4C18E640}.Debug|Win32.Build.0 = Debug|Win32
+		{56D65C75-73D1-43C5-9F0D-450A4C18E640}.Release|Win32.ActiveCfg = Release|Win32
+		{56D65C75-73D1-43C5-9F0D-450A4C18E640}.Release|Win32.Build.0 = Release|Win32
+		{AFDC477F-1D3F-4471-B9C9-451EF99E669C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AFDC477F-1D3F-4471-B9C9-451EF99E669C}.Debug|Win32.Build.0 = Debug|Win32
+		{AFDC477F-1D3F-4471-B9C9-451EF99E669C}.Release|Win32.ActiveCfg = Release|Win32
+		{AFDC477F-1D3F-4471-B9C9-451EF99E669C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

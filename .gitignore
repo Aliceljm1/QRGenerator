@@ -1,0 +1,7 @@
+syntax: glob
+Debug/
+Release/
+*.log
+*.obj
+QRGenerator.opensdf
+*.sdf

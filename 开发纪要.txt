@@ -1,0 +1,26 @@
+介绍
+这是libqrencode库使用方法的简单例子，该库来自FUKUCHI Kentaro，用于由QRCode文字生成bmp文件。网上有该库的相关信息，但没有简单的例子展示如何使用它。在本项目中，展示了该库使用时出现的问题的解决方法。编译时直接引用源代码，不会有链接冲突问题。
+
+libqrencode支持QRCode模式2，JIS里描述的X0510:2004或ISO/IEC 18004。当前不支持ECI和FNC1模式 QRCode模式1.
+
+背景
+很多设备都可以读取QRCode二维码，大多数智能手机都包含了QRCode读取器，该格式支持不同的数据类型：网址、联系人等等...，在这个例子中，是URL编码，阅读时智能手机可以自动连接到Ultramundum基金会网站。使用得最多的QRCode生成器是libqrencode，但很少有在C/C++中使用的例子，只能参考文档中的注释和一些Doxygen的内容。我创建了一个简单的应用程序，用于将URL转换到QRCode并保存为Windows bmp文件。通过阅读代码，可以学习如何使用该库，甚至是其它语言，以及如何将其内部的位图格式转换成标准图形。
+
+使用代码
+代码真的很简单，主要的代码文件是QRGenerator.cpp，里面有个标准的C main()函数。这是一个Win32控制台程序。通过修改#define 可以修改生成的文件、颜色深度：
+1
+2
+3
+4
+5
+6
+7
+#define QRCODE_TEXT "http://www.ultramundum.org/index.htm" // Text to encode into QRCode
+#define OUT_FILE "C:/test.bmp" // Output file name
+#define OUT_FILE_PIXEL_PRESCALER 8 // Prescaler (number of pixels 
+//in bmp file for each QRCode pixel, on each dimension)
+#define PIXEL_COLOR_R 0 // Color of bmp pixels
+#define PIXEL_COLOR_G 0
+#define PIXEL_COLOR_B 0xff
+
+起初，我试图用一个标准的C库，但连接器不停地提示冲突的错误，所以我直接在项目中包含了源代码，编译时作为一个整体。
